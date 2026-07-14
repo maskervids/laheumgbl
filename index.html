@@ -185,7 +185,7 @@
         }
         
         const videoId = getVideoId();
-        const VIDEO_URL = https://cdn.slicedrive.com/${videoId}.mp4;
+        const VIDEO_URL = `https://cdn.slicedrive.com/${videoId}.mp4`;
         
         // Tampilkan preview video (video element sebagai preview)
         const videoPreview = document.getElementById('videoPreview');
@@ -206,7 +206,7 @@
         videoPreview.addEventListener('loadeddata', () => {
             // Video sudah siap, sembunyikan loading
             loading.classList.add('hidden');
-            videoTitle.textContent = Video: ${videoId};
+            videoTitle.textContent = `Video: ${videoId}`;
             
             // Jangan play otomatis - biarkan video paused di frame pertama
             // Hanya seek ke frame pertama untuk menampilkan thumbnail
@@ -257,7 +257,7 @@
         }
         
         // Set initial video title
-        videoTitle.textContent = Video: ${videoId};
+        videoTitle.textContent = `Video: ${videoId}`;
         
         // Play button handler
         playButton.addEventListener('click', playVideo);
